@@ -1,0 +1,39 @@
+.customer_link {
+  font-weight: 600;
+}
+
+.cell_sub {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.cell_date {
+  color: var(--muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.row_actions {
+  white-space: nowrap;
+  text-align: right;
+}
+
+.row_actions > * + * {
+  margin-left: 14px;
+}
+
+.tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  vertical-align: 1px;
+}
+
+.tag_warning {
+  background: var(--warn-wash);
+  color: var(--warn-ink);
+  border: 1px solid var(--warn-line);
+}

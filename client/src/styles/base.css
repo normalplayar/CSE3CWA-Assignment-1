@@ -1,0 +1,254 @@
+:root {
+  --ink: #1c2b39;
+  --muted: #5b6b7a;
+  --line: #d6dee5;
+  --paper: #ffffff;
+  --bg: #f3f6f8;
+  --accent: #1f6f5c;
+  --accent-strong: #17574a;
+  --accent-wash: #e6f2ee;
+  --warn-ink: #7a4f00;
+  --warn-wash: #fff4d6;
+  --warn-line: #e8c46a;
+  --danger: #b42318;
+  --danger-wash: #fdecea;
+
+  --font: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius: 6px;
+  --focus: 0 0 0 3px rgba(31, 111, 92, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--accent-strong);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+  border-radius: 3px;
+}
+
+.visually_hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.page {
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+
+.page_heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  margin-bottom: 24px;
+}
+
+.heading_actions {
+  display: flex;
+  gap: 8px;
+}
+
+.back_link {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.loading {
+  color: var(--muted);
+}
+
+.notice {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  border-color: var(--muted);
+  color: var(--ink);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button_primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.button_primary:hover {
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  color: #fff;
+}
+
+.button_danger {
+  color: var(--danger);
+}
+
+.button_danger:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+  background: var(--danger-wash);
+}
+
+.button_quiet {
+  border-style: dashed;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.link_button {
+  border: 0;
+  padding: 0;
+  background: none;
+  font: inherit;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.link_button.danger {
+  color: var(--danger);
+}
+
+.form_alert {
+  background: var(--danger-wash);
+  border: 1px solid #f3b8b2;
+  border-left: 4px solid var(--danger);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  color: #7a1a12;
+  display: grid;
+  gap: 4px;
+}
+
+.section_note {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.table_scroll {
+  overflow-x: auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.data_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data_table th,
+.data_table td {
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+
+.data_table thead th {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: #f8fafb;
+}
+
+.data_table .num {
+  text-align: right;
+}
+
+.data_table tbody tr:last-child th,
+.data_table tbody tr:last-child td {
+  border-bottom: 0;
+}
